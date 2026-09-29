@@ -242,6 +242,47 @@ string? variableMayBeNull = "can be null";
 // it helps prevents NullReferenceException in modern C# 
 
 
+// C# Exceptions 
+// When some error happens you have to deal with this error by using Exceptions 
+
+try
+{
+    // 10 / 0 is a compile-time constant division => CS0020 error 
+    // so we use a variable holding zero to get a DivideByZeroException at RUNTIME 
+    int numerator = 10; 
+    int divisor = 0; 
+
+    var testingException = numerator / divisor; 
+
+    // this line is never reached, the exception jumps straight to the catch 
+    Console.WriteLine(testingException); 
+} catch (Exception e)
+{
+    Console.WriteLine($"Ixiii we got a error {e.Message}"); 
+}
+
+/*
+
+    One of the very common Exceptions in .NET APIs 
+
+    database failures 
+    http failures 
+    invalid input 
+    external api failures 
+    business rules 
+
+*/ 
+
+
+// Same project, same global namespace => no 'using' required 
+BankAccount bc = new BankAccount(); 
+
+bc.deposit(500.50m);
+
+bc.deposit(499.50m); 
+
+Console.WriteLine($"The bank balance is {bc.getBalance()} ");
+
 class Person
 {
     public string name { get; set; }
