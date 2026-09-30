@@ -32,14 +32,53 @@ string name = 'Elder';
 
 ## 1. Dependency Injection - DI
 
+**define a abstraction**
+```C#
+public interface INotificationService
+{
+    Task SendAsync(string message);
+}
+```
+
+**Create the implementation**
+```C#
+public class EmailNotificationService : INotificationService
+{
+    public Task SendAsync(string message)
+    {
+        Console.WriteLine($"Sending email: {message}");
+
+        return Task.CompletedTask;
+    }
+}
+```
+
 **configure the program.cs**
 ```C#
-
 builder.Services.AddScoped<
     INotificationService,
     EmailNotificationService>();
-
 ```
+
+**use the implementation this way**
+```C#
+public class OrderService
+{
+    private readonly INotificationService _notificationService;
+
+    public OrderService(INotificationService notificationService)
+    {
+        _notificationService = notificationService;
+    }
+
+    public async Task CreateOrderAsync()
+    {
+        // Create order...
+
+        await _notificationService.SendAsync("Order created");
+    }
+}
+``` 
 
 Why DI is useful
 - Easy to test
