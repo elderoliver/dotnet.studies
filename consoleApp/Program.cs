@@ -283,6 +283,30 @@ bc.deposit(499.50m);
 
 Console.WriteLine($"The bank balance is {bc.getBalance()} ");
 
+/* Access Modifiers 
+
+    private: only have access inside the class 
+    public: visible to everyone (Least Restricted)
+    protected: Visible inside its own class and any child 
+    internal: visible to any code within the same project/assembly 
+
+*/
+
+//Concept of encapsulation 
+//Keep data private in the class, just beeing access by its members(methods). 
+//It is useful to protect bussiness rules. 
+
+//Concept of Abstration 
+//Showing only what is necessary and hidding implementation details 
+
+//Concept of Inheritance 
+// one class can inherit functionality from another  
+
+Dog dog = new Dog(); 
+// The class dog inherits the method eat from the class animal. 
+dog.eat(); 
+
+
 class Person
 {
     public string name { get; set; }

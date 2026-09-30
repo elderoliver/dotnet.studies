@@ -3,6 +3,7 @@ public class BankAccount
 
     //Concept of encapsulation 
     //keep data private in the class, just beeing access by its members(methods). 
+    //It is useful to protect bussiness rules. 
 
     private decimal _balance; 
 
