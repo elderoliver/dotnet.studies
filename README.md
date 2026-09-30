@@ -20,3 +20,28 @@ Console.WriteLine("Hey there!!")
 
 # Running the App 
 dotnet run 
+
+
+-- 
+
+# Variables 
+string name = 'Elder'; 
+
+
+# .NET Backend — Core Concepts
+
+## 1. Dependency Injection - DI
+
+**configure the program.cs**
+```C#
+
+builder.Services.AddScoped<
+    INotificationService,
+    EmailNotificationService>();
+
+```
+
+Why DI is useful
+- Easy to test
+- Easier replacement of implementations 
+- Cleaner Architecture 
