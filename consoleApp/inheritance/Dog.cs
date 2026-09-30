@@ -1,5 +1,5 @@
 
-protected class Dog : Animal
+public class Dog : Animal
 {
     
 }

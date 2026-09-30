@@ -300,7 +300,10 @@ Console.WriteLine($"The bank balance is {bc.getBalance()} ");
 //Showing only what is necessary and hidding implementation details 
 
 //Concept of Inheritance 
-// one class can inherit functionality from another  
+//One class can inherit functionality from another  
+
+//Concept of Polymorphism
+//One same interface can represent more than one implementation
 
 Dog dog = new Dog(); 
 // The class dog inherits the method eat from the class animal. 
