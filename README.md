@@ -4,6 +4,10 @@ Some leetcode and basic concepts about dot. net
 # How to know the dotnet version
 dotnet --version
 
+# How to check the runtimes 
+dotnet --list-runtimes
+dotnet --list-sdks
+
 # you can also ran 
 dotnet --info
 
